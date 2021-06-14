@@ -1,0 +1,80 @@
+# 端口
+server:
+  port: 8084
+
+spring:
+  # 资源缓存
+  web:
+    resources:
+      # 默认启动缓存
+      add-mappings: true
+      # 资源链
+      # 默认禁用
+      chain:
+        cache: true
+        enabled: true
+        # 压缩资源
+        compressed: true
+        # h5缓存
+      cache:
+        cachecontrol:
+          max-age: 3600
+      static-locations: classpath:/static/
+
+
+  # thymeleaf 配置
+  thymeleaf:
+    # 关闭缓存
+    cache: false
+  datasource:
+    # 数据源配置 MySQL 8.0
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/spikeAction?useUnicode=ture&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai
+    username: root
+    password: root
+    # 默认最快的连接池
+    hikari:
+      pool-name: DataHikariCP
+      # 最小连接池
+      minimum-idle: 5
+      # 空闲连接最大存活时间 default 10min
+      idle-timeout: 1800000
+      # 最大存活时间
+      max-lifetime: 1800000
+
+  # redis配置
+  redis:
+    # for 远程
+    #host: 127.0.0.1
+    # 本地
+    host: 47.100.130.231
+    port: 6379
+    # 默认数据库 0
+    database: 0
+    # 超时时间
+    timeout: 10000ms
+    # 连接池
+    lettuce:
+      pool:
+        # 最大连接数
+        max-active: 8
+        # 最大连接等待时间 默认-1
+        max-wait: 10000ms
+        max-idle: 200
+        min-idle: 5
+
+
+# mybatis-plus配置
+mybatis-plus:
+  # mapper.xml 映射文件 classpath
+  config-locations: classpath*:/mapper/*Mapper.xml
+  # mybatis-plus 返回的类型名(默认是类名)
+  type-aliases-package: com.dengshuo.spikeaction.pojo
+
+
+# mybatis-plus SQL日志打印
+logging:
+  level:
+    # 方法接口所在的包
+    com.dengshuo.spikeaction.mapper: debug
+
