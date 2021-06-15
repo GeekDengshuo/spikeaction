@@ -1,7 +1,6 @@
-package com.dengshuo.spikeaction.utils;
+package com.dengshuo.spikeaction.common.utils;
 
 import org.apache.commons.codec.digest.DigestUtils;
-import org.apache.commons.lang3.RandomStringUtils;
 import org.apache.commons.text.RandomStringGenerator;
 import org.springframework.stereotype.Component;
 

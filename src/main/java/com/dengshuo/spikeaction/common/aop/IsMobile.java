@@ -1,4 +1,4 @@
-package com.dengshuo.spikeaction.validator;
+package com.dengshuo.spikeaction.common.aop;
 
 import javax.validation.Constraint;
 import javax.validation.Payload;

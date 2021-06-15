@@ -1,8 +1,7 @@
 package com.dengshuo.spikeaction;
 
-import com.dengshuo.spikeaction.utils.MD5Utils;
+import com.dengshuo.spikeaction.common.utils.MD5Utils;
 import org.junit.jupiter.api.Test;
-import org.springframework.beans.factory.annotation.Autowired;
 
 /**
  * @Author deng shuo

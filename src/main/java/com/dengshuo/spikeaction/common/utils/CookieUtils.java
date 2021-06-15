@@ -1,4 +1,4 @@
-package com.dengshuo.spikeaction.utils;
+package com.dengshuo.spikeaction.common.utils;
 
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;

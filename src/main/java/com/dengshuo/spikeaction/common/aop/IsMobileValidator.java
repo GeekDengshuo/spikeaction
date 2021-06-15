@@ -1,6 +1,5 @@
-package com.dengshuo.spikeaction.validator;
-
-import com.dengshuo.spikeaction.utils.ValidationUtils;
+package com.dengshuo.spikeaction.common.aop;
+import com.dengshuo.spikeaction.common.utils.ValidationUtils;
 import org.apache.commons.lang3.StringUtils;
 
 import javax.validation.ConstraintValidator;

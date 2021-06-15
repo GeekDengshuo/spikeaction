@@ -1,4 +1,4 @@
-package com.dengshuo.spikeaction.utils;
+package com.dengshuo.spikeaction.common.utils;
 
 import org.apache.commons.lang3.StringUtils;
 

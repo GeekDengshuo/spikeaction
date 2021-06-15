@@ -1,4 +1,4 @@
-package com.dengshuo.spikeaction.utils;
+package com.dengshuo.spikeaction.common.utils;
 
 import java.util.UUID;
 

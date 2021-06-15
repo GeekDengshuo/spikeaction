@@ -1,6 +1,6 @@
 package com.dengshuo.spikeaction.vo;
 
-import com.dengshuo.spikeaction.validator.IsMobile;
+import com.dengshuo.spikeaction.common.aop.IsMobile;
 import lombok.Data;
 import org.hibernate.validator.constraints.Length;
 

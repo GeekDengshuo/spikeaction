@@ -1,3 +1,17 @@
+
+### 项目架构
+
+#### 1.项目整体架构
+
+![](src/main/resources/pic/秒杀架构2.png)
+
+
+![](src/main/resources/pic/秒杀架构.png)
+
+
+#### 2.
+
+
 ### 项目记录
 
 #### 1.表中密码两次MD5加密
@@ -254,11 +268,33 @@ kill pid
 ```
 
 
+### 项目知识点
+
+#### 1.Disruptor
+
+[高性能队列-Disruptor](https://tech.meituan.com/2016/11/18/disruptor.html)
+队列是系统内部的内存队列,用来代替JVM中的BlockingQueue(ArrayBlockingQueue,LinkedBlockingQueue .etc)
+
+#### 2.SLB
+Server Load Balance 服务负载均衡
+
+SLB服务通过设置虚拟服务地址（IP），将位于同一地域（Region）的多台云服务器
+（Elastic Compute Service，简称ECS）资源虚拟成一个高性能、高可用的应用服务池；
+再根据应用指定的方式，将来自客户端的网络请求分发到云服务器池中
+
+##### 2.1 LVS
+
+##### 2.2 Tengine
+
+[SLB技术原理浅析](https://developer.aliyun.com/article/1803)
 
 ### 项目提升
 
 #### 1.添加注册界面
 
-#### 1.实现支付功能
 
-#### 1.长链接转换为短链接
+#### 2.实现支付功能
+
+[支付功能实现](https://gitee.com/52itstyle/spring-boot-pay)
+
+#### 3.长链接转换为短链接

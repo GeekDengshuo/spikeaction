@@ -1,6 +1,5 @@
 package com.dengshuo.spikeaction.controller;
 
-import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.dengshuo.spikeaction.pojo.Order;
 import com.dengshuo.spikeaction.pojo.OrderSpike;
 import com.dengshuo.spikeaction.pojo.User;
@@ -42,7 +41,6 @@ public class SpikeController {
 
     @Autowired
     private RedisTemplate redisTemplate;
-
 
     @RequestMapping(value = "/doSpike",method = RequestMethod.POST)
     @ResponseBody

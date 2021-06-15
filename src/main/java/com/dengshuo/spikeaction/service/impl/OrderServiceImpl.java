@@ -4,6 +4,7 @@ import com.baomidou.mybatisplus.core.conditions.Wrapper;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.conditions.update.UpdateWrapper;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
+import com.dengshuo.spikeaction.common.aop.ServiceLock;
 import com.dengshuo.spikeaction.exception.GlobalException;
 import com.dengshuo.spikeaction.mapper.OrderMapper;
 import com.dengshuo.spikeaction.pojo.GoodsSpike;
@@ -58,8 +59,9 @@ public class OrderServiceImpl extends ServiceImpl<OrderMapper, Order> implements
      * @param goods
      * @return
      */
-    @Transactional
+    @Transactional(rollbackFor = Exception.class)
     @Override
+    @ServiceLock
     public Order spike(User user, GoodsVo goods) {
 
         /* 获取秒杀商品 */
@@ -69,6 +71,7 @@ public class OrderServiceImpl extends ServiceImpl<OrderMapper, Order> implements
 
         //goodsSpike.setGoodsSpikeStock(goodsSpike.getGoodsSpikeStock()-1);
 
+        // update 数据库悲观锁
         boolean SpikeUpdateResult = iGoodsSpikeService.update(new UpdateWrapper<GoodsSpike>().
                 setSql("goodsSpikeStock = goodsSpikeStock -1").
                 eq("id",goods.getId()).

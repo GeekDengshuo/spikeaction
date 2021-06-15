@@ -2,7 +2,7 @@ package com.dengshuo.spikeaction.config;
 
 import com.dengshuo.spikeaction.pojo.User;
 import com.dengshuo.spikeaction.service.IUserService;
-import com.dengshuo.spikeaction.utils.CookieUtils;
+import com.dengshuo.spikeaction.common.utils.CookieUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.MethodParameter;
 import org.springframework.stereotype.Component;
