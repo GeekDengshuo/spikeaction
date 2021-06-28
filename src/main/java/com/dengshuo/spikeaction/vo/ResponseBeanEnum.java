@@ -34,7 +34,8 @@ public enum  ResponseBeanEnum {
 
     // spike 500xx
     EMPTY_STOCK(500010,"无剩余商品,库存不足"),
-    LIMIT_ERROR(500010,"秒杀商品,限购一件"),
+    LIMIT_ERROR(500011,"秒杀商品,限购一件"),
+    REDIS_LOCK_ERROR(500012,"Redission加锁失败"),
 
     // order
     ORDER_NOT_EXIST(6000010,"订单信息不存在"),
